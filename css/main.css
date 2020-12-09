@@ -1,0 +1,126 @@
+@font-face {
+  font-family: 'Gotham';
+  src: url("../assets/gothambook-webfont.woff2");
+  font-weight: 200;
+}
+
+body {
+  font-family: 'Gotham', serif;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+  width: 970px;
+  height: 250px;
+}
+
+.logo {
+  width: 50%;
+  height: auto;
+  position: relative;
+  left: 5%;
+  top: 30%;
+}
+
+.logo img {
+  position: absolute;
+  padding: 5px;
+}
+
+.image {
+  height: 250px;
+  width: 970px;
+  background-image: url("../assets/DrShieh.jpg");
+  display: block;
+  position: absolute;
+}
+
+.infoContainer {
+  position: relative;
+  display: block;
+  left: 25%;
+  top: 0;
+}
+
+.info {
+  text-align: left;
+  font-size: 30px;
+  color: #fff;
+  position: absolute;
+  padding: 12px 20px;
+}
+
+.finalFrame {
+  position: relative;
+  display: block;
+  left: 25%;
+  top: 40%;
+}
+
+.finalFrameInfo {
+  text-align: left;
+  color: #fff;
+  font-size: 15px;
+  white-space: nowrap;
+  position: absolute;
+  opacity: 0;
+  padding: 5px 20px;
+}
+
+.blueContainerBottom {
+  background-color: #009bdb;
+  border-radius: 10px;
+  height: 35px;
+  width: auto;
+  position: absolute;
+  display: flex;
+  bottom: 15%;;
+  left: 27%;
+  align-items: center;
+}
+
+.CTA .arrow-right {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.CTA {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 900;
+  text-align: left;
+  padding: 0 15px;
+}
+
+.arrow-right {
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  padding: 2px;
+  transform: rotate(-45deg);
+}
+
+@keyframes showInfo {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+a:hover .finalFrameInfo {
+  animation: showInfo 1s forwards;
+}
+
+@keyframes moveInfoUp {
+  from {top: 0;}
+  to {top: -10%;}
+}
+
+a:hover .infoContainer {
+  animation: moveInfoUp .5s forwards;
+}
